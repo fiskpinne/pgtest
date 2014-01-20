@@ -16,5 +16,11 @@
     <author>
         Markus 
     </author>
+          
+    <preference name="permissions" value="none"/>
+    <feature name="http://api.phonegap.com/1.0/camera"/>
+          
     <gap:platform name="android" />
+          
+    <gap:plugin name="nl.x-services.plugins.flashlight" />
 </widget>
