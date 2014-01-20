@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="lib/jquery.mobile-1.4.0.min.css">
     <script src="lib/jquery-2.0.3.min.js"></script> 
     <script src="lib/jquery.mobile-1.4.0.min.js"></script>
+    <script src="phonegap.js"></script>
+    <script src="Flashlight.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Test</title>
   </head>
@@ -16,7 +18,7 @@
          <div data-role="content">      
                <ul data-role="listview" data-inset="true" data-dividertheme="b"> 
                      <li data-role="list-divider">Options</li> 
-                     <li><a href="javascript:window.plugins.flashlight.toggle();">Option 1</a></li> 
+                     <li><a href="#" onclick="window.plugins.flashlight.toggle();">Option 1</a></li> 
                      <li><a href="#">Option 2</a></li> 
                      <li><a href="#">Option 3</a></li> 
                      <li><a href="#">Option 4</a></li> 
