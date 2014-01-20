@@ -4,23 +4,28 @@
         id          = "com.fiskpinne.example"
         versionCode = "10" 
         version     = "0.0.1" >
-
-    <!-- versionCode is optional and Android only -->
-
-    <name>PhoneGap Test</name>
-
-    <description>
-        A phonegap test. 
-    </description>
-
-    <author>
-        Markus 
-    </author>
           
-    <preference name="permissions" value="none"/>
-    <feature name="http://api.phonegap.com/1.0/camera"/>
+
+
+          <!-- versionCode is optional and Android only -->
+
+          <preference name="phonegap-version" value="3.1.0" />
+
+
+          <name>PhoneGap Test</name>
+
+          <description>
+            A phonegap test. 
+          </description>
+
+          <author>
+            Markus
+          </author>
+
+          <preference name="permissions" value="none"/>
+          <feature name="http://api.phonegap.com/1.0/camera"/>
           
-    <gap:platform name="android" />
+          <gap:platform name="android" />
           
-    <gap:plugin name="nl.x-services.plugins.flashlight" />
+          <gap:plugin name="nl.x-services.plugins.flashlight" />
 </widget>
