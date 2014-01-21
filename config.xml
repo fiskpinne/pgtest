@@ -28,5 +28,5 @@
           <gap:platform name="android" />
           
           <gap:plugin name="nl.x-services.plugins.flashlight" />
-          <gap:plugin name="com.phonegap.plugins.vibration" />
+          <gap:plugin name="org.apache.cordova.vibration" />
 </widget>
