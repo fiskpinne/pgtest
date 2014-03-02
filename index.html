@@ -11,6 +11,7 @@
     <style type="text/css">
       html {
         height: 100%;
+        font-size: 30px;
       }
       
       body {
@@ -22,7 +23,7 @@
         background-color: #ccc;
         margin: 10px;
         padding: 10px;
-        height: 300px;
+        height: 200px;
         
       }
       
@@ -31,43 +32,46 @@
         color: red;
         display: block;
         float: left;
-        font-size: 48px;
         margin: 0 5px 0 0;
         padding: 10px;
       }
   </style>
     
   </head>
-        <body>
-<div class="alpha">
-  <span class="tile">D</span>
-  <span class="tile">B</span>
-  <span class="tile">E</span>
-</div>
-<div class="gamma">
-  <span class="tile">C</span>
-  <span class="tile">A</span>
-</div>
-                <script type="text/javascript">
-                        
-$('.alpha').sortable({
-  connectWith: '.gamma',
-  receive: function (event, ui) {
-    if ($(ui.item).hasClass('special')) {
-      ui.sender.sortable('cancel');
-    }
-  }
-});
-
-$('.gamma').sortable({
-  appendTo: document.body,
-  items: '.tile',
-  connectWith: '.alpha, .beta',
-  receive: function (event, ui) {
-    //console.log(event, ui.item);
-    //ui.item.remove(); // remove original item
-  }
-});
-                </script>
-        </body>
+  <body>
+  
+    <p>
+      我爱你
+    </p>
+    <div class="alpha">
+    </div>
+    <div class="gamma">
+      <span class="tile">you</span>
+      <span class="tile">he</span>
+      <span class="tile">I</span>
+      <span class="tile">hate</span>
+      <span class="tile">love</span>
+      <span class="tile">me</span>
+    </div>
+    
+    <script type="text/javascript">
+                  
+      $('.alpha').sortable({
+        connectWith: '.gamma',
+        receive: function (event, ui) {
+          if ($(ui.item).hasClass('special')) {
+            ui.sender.sortable('cancel');
+          }
+        }
+      });
+      
+      $('.gamma').sortable({
+        appendTo: document.body,
+        items: '.tile',
+        connectWith: '.alpha',
+        receive: function (event, ui) {
+        }
+      });
+    </script>
+  </body>
 </html>
