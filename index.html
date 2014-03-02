@@ -44,24 +44,24 @@
       我爱你
     </p>
     <div class="alpha">
+        <span class="tile" style="display:none" id="0">D</span>
     </div>
     <div class="gamma">
-      <span class="tile">you</span>
-      <span class="tile">he</span>
-      <span class="tile">I</span>
-      <span class="tile">hate</span>
-      <span class="tile">love</span>
-      <span class="tile">me</span>
+      <span class="tile" id="1">you</span>
+      <span class="tile" id="2">he</span>
+      <span class="tile" id="3">I</span>
+      <span class="tile" id="4">hate</span>
+      <span class="tile" id="5">love</span>
+      <span class="tile" id="6">me</span>
     </div>
+    <button id="done">Done</button>
     
     <script type="text/javascript">
                   
       $('.alpha').sortable({
         connectWith: '.gamma',
+        items: '.tile',
         receive: function (event, ui) {
-          if ($(ui.item).hasClass('special')) {
-            ui.sender.sortable('cancel');
-          }
         }
       });
       
@@ -72,6 +72,22 @@
         receive: function (event, ui) {
         }
       });
+      
+      $('#done').click(function() {
+        var answer = "";
+        $('.alpha').children('.tile').each(function () {
+          answer += this.id;
+        });
+        if(answer == "0351") 
+        {
+          alert("correct");
+        }
+        else
+        {
+          alert("incorrect");
+        }
+      });
+
     </script>
   </body>
 </html>
