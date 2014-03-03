@@ -43,10 +43,10 @@
     <p>
       我爱你
     </p>
-    <div class="alpha">
+    <div id="answer">
         <span class="tile" style="display:none" id="0">D</span>
     </div>
-    <div class="gamma">
+    <div id="alternatives">
       <span class="tile" id="1">you</span>
       <span class="tile" id="2">he</span>
       <span class="tile" id="3">I</span>
@@ -58,26 +58,39 @@
     
     <script type="text/javascript">
                   
-      $('.alpha').sortable({
-        connectWith: '.gamma',
+      $('#answer').sortable({
+        connectWith: '#alternatives',
         items: '.tile',
+        receive: function (event, ui) {
+          //alert("receive");
+        }
+      });
+      
+      $('#alternatives').sortable({
+        appendTo: document.body,
+        items: '.tile',
+        connectWith: '#answer',
         receive: function (event, ui) {
         }
       });
       
-      $('.gamma').sortable({
-        appendTo: document.body,
-        items: '.tile',
-        connectWith: '.alpha',
-        receive: function (event, ui) {
+      $('.tile').click(function() {
+        if($(this).parent().attr('id') == "alternatives")
+        {
+          $(this).appendTo("#answer");
+        }
+        else if($(this).parent().attr('id') == "answer")
+        {
+          $(this).appendTo("#alternatives");
         }
       });
       
       $('#done').click(function() {
         var answer = "";
-        $('.alpha').children('.tile').each(function () {
+        $('#answer').children('.tile').each(function () {
           answer += this.id;
         });
+        //alert(answer);
         if(answer == "0351") 
         {
           alert("correct");
