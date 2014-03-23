@@ -1,0 +1,11 @@
+{
+    "name" : "lesson1",
+    "questions" : 
+    [
+        {
+            "question" : "我爱你",
+            "ansver" : ["I","love","you"],
+            "alternatives" : ["he","she","him","her","like"]
+        }
+    ]
+}
