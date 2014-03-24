@@ -17,9 +17,12 @@ div {
 
 .tile {
     background: #333;
-    color: red;
+    color: #fff;
     display: block;
     float: left;
-    margin: 0 5px 0 0;
-    padding: 10px;
+    margin: 2px;
+    padding: 4px;
+    border-radius: 8px;
+    min-width: 70px;
+    text-align: center;
 }

@@ -1,5 +1,7 @@
+var curQuestion;
+
 $('#answer').sortable({
-          tWith: '#alternatives',
+    connectWith: '#alternatives',
     items: '.tile',
     receive: function (event, ui) {
         //alert("receive");
@@ -14,29 +16,7 @@ $('#alternatives').sortable({
     }
 });
 
-$('.tile').click(function() {
-    if($(this).parent().attr('id') == "alternatives")
-    {
-        $(this).appendTo("#answer");
-    }
-    else if($(this).parent().attr('id') == "answer")
-    {
-        $(this).appendTo("#alternatives");
-    }
-});
-
-$('#done').click(function() {
-    var answer = "";
-    $('#answer').children('.tile').each(function () {
-        answer += this.id;
-    });
-    //alert(answer);
-    if(answer == "0351") 
-    {
-        alert("correct");
-    }
-    else
-    {
-        alert("incorrect");
-    }
+$.getJSON( "data/lesson1.json", function(data) {
+    curQuestion = data.questions[0];
+    initQuestion(curQuestion);
 });

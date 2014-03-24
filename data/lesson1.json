@@ -4,8 +4,9 @@
     [
         {
             "question" : "我爱你",
-            "ansver" : ["I","love","you"],
-            "alternatives" : ["he","she","him","her","like"]
+            "answer" : ["I","love","you"],
+            "alternatives" : ["he","she","him","her","like"],
+            "audio" : "woaini.mp3"
         }
     ]
 }

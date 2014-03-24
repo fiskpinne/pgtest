@@ -12,24 +12,21 @@
   </head>
   <body>
   
-    <p>
-      我爱你
-    </p>
+    <p id="question" onclick="audio.play();"></p>
+
     <div id="answer">
         <span class="tile" style="display:none" id="0">D</span>
     </div>
     <div id="alternatives">
-      <span class="tile" id="1">you</span>
-      <span class="tile" id="2">he</span>
-      <span class="tile" id="3">I</span>
-      <span class="tile" id="4">hate</span>
-      <span class="tile" id="5">love</span>
-      <span class="tile" id="6">me</span>
     </div>
     <button id="done">Done</button>
 
-    <script src="js/main.js" type="text/javascript">
-
+    <script src="js/functions.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var audio = new Audio('data/audio/woaini.mp3');
     </script>
+
+      
   </body>
 </html>
