@@ -5,7 +5,7 @@
         {
             "question" : "我爱你",
             "answer" : ["I","love","you"],
-            "alternatives" : ["he","she","him","her","like"],
+            "alternatives" : ["he","she","him","her","like","whatever"],
             "audio" : "woaini.mp3"
         }
     ]

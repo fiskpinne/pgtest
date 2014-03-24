@@ -1,28 +1,52 @@
 html {
     height: 100%;
-    font-size: 30px;
 }
 
 body {
     font-family: sans-serif;
     min-height: 100%;
+    margin: 1vh 1vw;
+    padding: 0px;
 }
 
-div {
+.outer {
     background-color: #ccc;
-    margin: 10px;
-    padding: 10px;
-    height: 200px;
+    margin: 2vh 2vw;
+    padding: 1.5vh 1.5vw;
+    border-radius: 8px;
 }
+
+#answer {
+    height: 25vh;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;    
+}
+
+#alternatives {
+    height: 40vh;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    text-align: center;
+    font-size: 7vmin;
+    width: 100%;
+    margin: 1vmin;
+}
+
 
 .tile {
     background: #333;
     color: #fff;
     display: block;
     float: left;
-    margin: 2px;
-    padding: 4px;
+    margin: 0.5%;
+    padding: 1%;
     border-radius: 8px;
-    min-width: 70px;
+    width: 30%;
     text-align: center;
+    font-size: 5vmin;
 }
